@@ -1,0 +1,17 @@
+Welcome to the first Axiom Zen coding challenge!
+
+In order to speed up your work, we've provided a test harness for each of the
+following languages on their own branch:
+
+ - javascript
+ - go
+ - ruby
+ - python
+ - java
+
+To get started with one of these languages, use the command "git merge
+<language>" to merge the appropriate branch into master. Make your edits,
+commit them and push them back to our server and we can evaluate your results!
+
+If you want to use a different language, please send us an email indicate what
+language you'd like to use, and why, and we'll let you know if it makes sense.
