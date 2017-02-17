@@ -45,13 +45,13 @@ class MatrixSolver
   end
 
   def fork?
-      options = [right?, down?]
-      options.count(true) > 1
+    options = [right?, down?]
+    options.count(true) > 1
   end
 
   def right?
-      target = @matrix[row][col + 1]
-      target != 0 && target != nil
+    target = @matrix[row][col + 1]
+    target != 0 && target != nil
   end
 
   def down?
