@@ -1,5 +1,5 @@
 #! /usr/bin/env ruby
-require_relative 'matrix_solver'
+require_relative 'matrix_solver_dynamic'
 
 
 # Complete the function below, the input variable "matrix" is
