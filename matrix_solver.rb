@@ -80,7 +80,7 @@ class MatrixSolver
   def down?
     if y != (@matrix.length - 1)
       cell = @matrix[y + 1][x]
-      nopes = [0, :t, '$']
+      nopes = [0, '$']
 
       !nopes.include?(cell)
     else
