@@ -8,21 +8,21 @@ require_relative 'matrix_solver_dynamic'
 #
 # The return value should be an integer specifying the number
 # of valid paths through the matrix.
-def numberOfPaths(matrix)
+def numberOfPaths(m)
   result = 0
 
-  unless invalid?(matrix[0][0])
-    m = MatrixSolver.new(matrix)
-    m.find_solutions
+  unless invalid?(m[0][0], m[m.length - 1][m[0].length - 1])
+    matrix = MatrixSolver.new(m)
+    matrix.find_solutions
 
-    result = m.solution_count
+    result = matrix.solution_count
   end
 
   return result
 end
 
-def invalid?(start)
-  start == 0
+def invalid?(start, finish)
+  start == 0 || finish == 0
 end
 
 

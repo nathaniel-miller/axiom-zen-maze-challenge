@@ -3,7 +3,7 @@ class MatrixSolver
 
   def initialize(_matrix)
     @matrix = _matrix
-    @location = [@matrix.length - 1, @matrix[0].length - 1]
+    @location = [@matrix.length - 1, @matrix[0].length - 2]
   end
 
   def find_solutions
@@ -19,8 +19,6 @@ class MatrixSolver
   def mark_cell
     if blocked?
       return
-    elsif end?
-      @matrix[row][col] = 1
     elsif fork?
       @matrix[row][col] = @matrix[row + 1][col] + @matrix[row][col + 1]
     elsif right?
@@ -34,10 +32,6 @@ class MatrixSolver
 
   def blocked?
     @matrix[row][col] == 0
-  end
-
-  def end?
-    @location == [@matrix.length - 1, @matrix[0].length - 1]
   end
 
   def fork?
