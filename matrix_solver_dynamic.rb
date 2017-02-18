@@ -40,10 +40,6 @@ class MatrixSolver
     @location == [@matrix.length - 1, @matrix[0].length - 1]
   end
 
-  def beginning?
-    @location == [0,0]
-  end
-
   def fork?
     options = [right?, down?]
     options.count(true) > 1
